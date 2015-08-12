@@ -19,6 +19,8 @@ public class LMSpringboardItemView: UIView
 	private var _visualEffectView: UIView?
 	private var _visualEffectMaskView: UIImageView?
 	
+	private let _ITEM_DIAMETER: CGFloat = 120;
+	
 	let kLMSpringboardItemViewSmallThreshold: CGFloat = 0.75;
 
 	private var _scale: CGFloat
@@ -105,7 +107,7 @@ public class LMSpringboardItemView: UIView
 		label.sizeToFit()
 		label.center = CGPointMake(size.width*0.5, size.height+4);
 	
-		let ascale = 60/size.width;
+		let ascale = _ITEM_DIAMETER/size.width;
 		icon.transform = CGAffineTransformMakeScale(ascale, ascale);
 		_visualEffectView?.transform = icon.transform;
 	}

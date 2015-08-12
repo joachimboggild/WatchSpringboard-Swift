@@ -19,8 +19,14 @@ public class LMViewControllerView : UIView
 	private var _appLaunchMaskView: UIImageView!
 	private var _lastLaunchedItem: LMSpringboardItemView?
 	
+	private let _ITEM_HEIGHT: CGFloat = 120;
+	private let _ITEM_WIDTH: CGFloat = 120;
+	
 	public required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder);
+	}
+	
+	public func setup() {
 		let fullFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 		let mask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth;
 		
@@ -40,14 +46,14 @@ public class LMViewControllerView : UIView
 		// pre-render the known icons
 		var images = [UIImage]();
 		
-		let clipPath = UIBezierPath(ovalInRect: CGRectInset(CGRectMake(0, 0, 60, 60), 0.5, 0.5));
+		let clipPath = UIBezierPath(ovalInRect: CGRectInset(CGRectMake(0, 0, _ITEM_WIDTH, _ITEM_HEIGHT), 0.5, 0.5));
 		
 		for app in apps {
 			let image = app.icon;
 			
-			UIGraphicsBeginImageContextWithOptions(CGSizeMake(60, 60), false, UIScreen.mainScreen().scale);
+			UIGraphicsBeginImageContextWithOptions(CGSizeMake(_ITEM_WIDTH, _ITEM_HEIGHT), false, UIScreen.mainScreen().scale);
 			clipPath.addClip();
-			image.drawInRect(CGRectMake(0, 0, 60, 60));
+			image.drawInRect(CGRectMake(0, 0, _ITEM_WIDTH, _ITEM_HEIGHT));
 			let renderedImage = UIGraphicsGetImageFromCurrentImageContext();
 			UIGraphicsEndImageContext();
 			
@@ -104,7 +110,7 @@ public class LMViewControllerView : UIView
 	
 		_appLaunchMaskView.center = CGPointMake(size.width*0.5, size.height*0.5+statusFrame.size.height);
 	
-		respringButton.bounds = CGRectMake(0, 0, 60, 60);
+		respringButton.bounds = CGRectMake(0, 0, _ITEM_WIDTH, _ITEM_HEIGHT);
 		respringButton.center = CGPointMake(size.width*0.5, size.height-60*0.5);
 	}
 
@@ -118,7 +124,7 @@ public class LMViewControllerView : UIView
 		let dx = pointInSelf.x - appView.center.x;
 		let dy = pointInSelf.y - appView.center.y;
 		
-		let appScale = 60 * item.scale / min(appView.bounds.size.width, appView.bounds.size.height);
+		let appScale = _ITEM_WIDTH * item.scale / min(appView.bounds.size.width, appView.bounds.size.height);
 
 		let xform = CGAffineTransformMakeTranslation(dx, dy);
 		let xform2 = CGAffineTransformScale(xform, appScale, appScale)
@@ -128,8 +134,8 @@ public class LMViewControllerView : UIView
 		
 		_appLaunchMaskView.transform = CGAffineTransformMakeScale(0.01, 0.01);
 		
-		let springboardScale = min(self.bounds.size.width, self.bounds.size.height) / (60 * item.scale);
-		let maskScale = max(self.bounds.size.width, self.bounds.size.height) / (60 * item.scale) * 1.2 * item.scale;
+		let springboardScale = min(self.bounds.size.width, self.bounds.size.height) / (_ITEM_WIDTH * item.scale);
+		let maskScale = max(self.bounds.size.width, self.bounds.size.height) / (_ITEM_WIDTH * item.scale) * 1.2 * item.scale;
 		
 		UIView.animateWithDuration(0.5,
 			animations: {
@@ -170,11 +176,11 @@ public class LMViewControllerView : UIView
 			let appTransform = CGAffineTransformScale(CGAffineTransformMakeTranslation(dx, dy), appScale, appScale);
 			appView.maskView = _appLaunchMaskView;
 			
-			let springboardScale = min(self.bounds.size.width,self.bounds.size.height)/(60 * _lastLaunchedItem!.scale);
+			let springboardScale = min(self.bounds.size.width,self.bounds.size.height)/(_ITEM_WIDTH * _lastLaunchedItem!.scale);
 			springboard.transform = CGAffineTransformTranslate(CGAffineTransformMakeScale(springboardScale,springboardScale), -dx, -dy);
 			springboard.alpha = 0;
 	
-			let maskScale = max(bounds.size.width, bounds.size.height) / (60*_lastLaunchedItem!.scale)*1.2*_lastLaunchedItem!.scale;
+			let maskScale = max(bounds.size.width, bounds.size.height) / (_ITEM_WIDTH*_lastLaunchedItem!.scale)*1.2*_lastLaunchedItem!.scale;
 	
 			_appLaunchMaskView.transform = CGAffineTransformMakeScale(maskScale,maskScale);
 	

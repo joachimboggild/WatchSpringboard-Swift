@@ -20,6 +20,8 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
 	private var _debugRectInContent: UIView!
 	private var _debugRectInScroll: UIView!
 	
+	private let _ITEM_DIAMETER: CGFloat = 120;
+	
 	// controls how much transform we apply to the views (not used)
 	var _transformFactor: CGFloat = 1.0
 	
@@ -253,7 +255,8 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
 		self.decelerationRate = UIScrollViewDecelerationRateFast;
 		self.delegate = self;
   
-		self.itemDiameter = 68;
+//		self.itemDiameter = 68;
+		self.itemDiameter = _ITEM_DIAMETER + 8;
 		self.itemPadding = 48;
 		self.minimumItemScaling = 0.5;
   
@@ -262,7 +265,7 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
 		minimumZoomLevelToLaunchApp = 0.4;
   
 		_touchView = UIView();
-		_touchView.backgroundColor = UIColor.purpleColor();
+//		_touchView.backgroundColor = UIColor.purpleColor();
 		addSubview(_touchView);
   
 		_contentView = UIView();
@@ -278,7 +281,7 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
   _debugRectInScroll.alpha= 0.4;
   [self addSubview:_debugRectInScroll];*/
   
-		doubleTapGesture = UITapGestureRecognizer(target: self, action: "LM_didZoomGesture");
+		doubleTapGesture = UITapGestureRecognizer(target: self, action: "LM_didZoomGesture:");
 		doubleTapGesture.numberOfTapsRequired = 1;
 		_contentView.addGestureRecognizer(doubleTapGesture);
 	}
@@ -611,7 +614,7 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
 			_contentSizeUnscaled = CGSizeMake(sizeWidth, sizeHeight);
 			newMinimumZoomScale = min((size.width-insets.left-insets.right)/_contentSizeUnscaled.width, (size.height-insets.top-insets.bottom)/_contentSizeUnscaled.height);
 	
-			_contentSizeExtra = CGSizeMake((size.width-_itemDiameter*0.5)/newMinimumZoomScale, (size.height-_itemDiameter*0.5)/newMinimumZoomScale);
+			_contentSizeExtra = CGSizeMake((size.width-itemDiameter*0.5)/newMinimumZoomScale, (size.height-itemDiameter*0.5)/newMinimumZoomScale);
 	
 			_contentSizeUnscaled.width += _contentSizeExtra.width;
 			_contentSizeUnscaled.height += _contentSizeExtra.height;

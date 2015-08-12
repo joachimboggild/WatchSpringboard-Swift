@@ -14,12 +14,12 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 	// MARK:
 	// MARK: PRIVATES
 	
-	private func customView() -> LMViewControllerView {
-		return view as! LMViewControllerView;
+	private var customView: LMViewControllerView {
+			return view as! LMViewControllerView;
 	}
 
-	private func springboard() -> LMSpringboardView {
-		return customView().springboard;
+	private var springboard: LMSpringboardView {
+		return customView.springboard;
 	}
 	
 	
@@ -28,16 +28,16 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 	// MARK: Notifications
 	
 	public func LM_didBecomeActive() {
-		if !customView().isAppLaunched {
-			springboard().centerOnIndex(0, zoomScale: 1, animated: false);
-			springboard().doIntroAnimation();
-			springboard().alpha = 1;
+		if !customView.isAppLaunched {
+			springboard.centerOnIndex(0, zoomScale: 1, animated: false);
+			springboard.doIntroAnimation();
+			springboard.alpha = 1;
 		}
 	}
 
 	public func LM_didEnterBackground() {
-		if !customView().isAppLaunched {
-			springboard().alpha = 0;
+		if !customView.isAppLaunched {
+			springboard.alpha = 0;
 		}
 	}
 	
@@ -49,7 +49,7 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 	// MARK: UIGestureRecognizerDelegate
 	
 	public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-		if springboard().zoomScale < springboard().minimumZoomLevelToLaunchApp {
+		if springboard.zoomScale < springboard.minimumZoomLevelToLaunchApp {
 			return false;
 		} else {
 			return true;
@@ -63,19 +63,19 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 	// MARK: Input
 	
 	func LM_respringTapped(sender: AnyObject) {
-		if customView().isAppLaunched {
-			customView().quitApp();
+		if customView.isAppLaunched {
+			customView.quitApp();
 			UIView.animateWithDuration(0.3) {
 				self.setNeedsStatusBarAppearanceUpdate();
 			};
 		} else {
 			UIView.animateWithDuration(0.3, animations: {
 				() -> Void in
-				self.springboard().alpha = 0;
+				self.springboard.alpha = 0;
 			}, completion: {
 				(completed: Bool) -> Void in
-				self.springboard().doIntroAnimation();
-				self.springboard().alpha = 1;
+				self.springboard.doIntroAnimation();
+				self.springboard.alpha = 1;
 			});
 		}
 	}
@@ -86,7 +86,7 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 			item = item?.superview;
 		}
 		
-		customView().launchAppItem(item as! LMSpringboardItemView);
+		customView.launchAppItem(item as! LMSpringboardItemView);
 		
 		UIView.animateWithDuration(0.5) {
 			self.setNeedsStatusBarAppearanceUpdate();
@@ -105,7 +105,7 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "LM_didBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil);
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "LM_didEnterBackground", name: UIApplicationDidEnterBackgroundNotification, object: nil);
 		
-		springboard().centerOnIndex(0, zoomScale: springboard().zoomScale, animated: false);
+		springboard.centerOnIndex(0, zoomScale: springboard.zoomScale, animated: false);
 	}
 	
 	public override func viewWillDisappear(animated: Bool) {
@@ -116,10 +116,11 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 
 	public override func viewDidLoad() {
 		super.viewDidLoad()
-		customView().respringButton.addTarget(self, action: "LM_respringTapped:", forControlEvents: UIControlEvents.TouchUpInside);
-		springboard().alpha = 0;
+		customView.setup();
+		customView.respringButton.addTarget(self, action: "LM_respringTapped:", forControlEvents: UIControlEvents.TouchUpInside);
+		springboard.alpha = 0;
 		
-		for item in springboard().itemViews as! [LMSpringboardItemView] {
+		for item in springboard.itemViews as! [LMSpringboardItemView] {
 			let tap = UITapGestureRecognizer(target: self, action: "LM_iconTapped:");
 			tap.numberOfTapsRequired = 1;
 			tap.delegate = self;
@@ -128,7 +129,7 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 	}
 	
 	public override func preferredStatusBarStyle() -> UIStatusBarStyle {
-		if isViewLoaded() && customView().isAppLaunched {
+		if isViewLoaded() && customView.isAppLaunched {
 			return UIStatusBarStyle.Default
 		} else {
 			return UIStatusBarStyle.LightContent;
