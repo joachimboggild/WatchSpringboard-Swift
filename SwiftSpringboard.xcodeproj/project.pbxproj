@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA71710B1B79CD0E00B51D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71710A1B79CD0E00B51D25 /* AppDelegate.swift */; };
+		AA71710D1B79CD0E00B51D25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71710C1B79CD0E00B51D25 /* ViewController.swift */; };
+		AA7171101B79CD0E00B51D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA71710E1B79CD0E00B51D25 /* Main.storyboard */; };
+		AA7171121B79CD0E00B51D25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA7171111B79CD0E00B51D25 /* Images.xcassets */; };
+		AA7171151B79CD0E00B51D25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7171131B79CD0E00B51D25 /* LaunchScreen.xib */; };
+		AA7171211B79CD0E00B51D25 /* SwiftSpringboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171201B79CD0E00B51D25 /* SwiftSpringboardTests.swift */; };
+		AA7171351B79CE2C00B51D25 /* LMViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171341B79CE2C00B51D25 /* LMViewControllerView.swift */; };
+		AA7171391B79DAA000B51D25 /* LMApp.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7171381B79DAA000B51D25 /* LMApp.m */; };
+		AA71713C1B79DB6500B51D25 /* LMAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA71713B1B79DB6500B51D25 /* LMAppController.m */; };
+		AA71713F1B79DBE700B51D25 /* LMSpringboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71713E1B79DBE700B51D25 /* LMSpringboardItemView.swift */; };
+		AA7171411B79E3E800B51D25 /* LMSpringboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171401B79E3E800B51D25 /* LMSpringboardView.swift */; };
+		AA7171671B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171431B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png */; };
+		AA7171681B7B346800B51D25 /* Icon-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171441B7B346800B51D25 /* Icon-0@2x.png */; };
+		AA7171691B7B346800B51D25 /* Icon-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171451B7B346800B51D25 /* Icon-10@2x.png */; };
+		AA71716A1B7B346800B51D25 /* Icon-11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171461B7B346800B51D25 /* Icon-11@2x.png */; };
+		AA71716B1B7B346800B51D25 /* Icon-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171471B7B346800B51D25 /* Icon-12@2x.png */; };
+		AA71716C1B7B346800B51D25 /* Icon-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171481B7B346800B51D25 /* Icon-13@2x.png */; };
+		AA71716D1B7B346800B51D25 /* Icon-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171491B7B346800B51D25 /* Icon-14@2x.png */; };
+		AA71716E1B7B346800B51D25 /* Icon-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71714A1B7B346800B51D25 /* Icon-15@2x.png */; };
+		AA71716F1B7B346800B51D25 /* Icon-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71714B1B7B346800B51D25 /* Icon-16@2x.png */; };
+		AA7171701B7B346800B51D25 /* Icon-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71714C1B7B346800B51D25 /* Icon-17@2x.png */; };
+		AA7171711B7B346800B51D25 /* Icon-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71714D1B7B346800B51D25 /* Icon-18@2x.png */; };
+		AA7171721B7B346800B51D25 /* Icon-19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71714E1B7B346800B51D25 /* Icon-19@2x.png */; };
+		AA7171731B7B346800B51D25 /* Icon-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71714F1B7B346800B51D25 /* Icon-1@2x.png */; };
+		AA7171741B7B346800B51D25 /* Icon-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171501B7B346800B51D25 /* Icon-20@2x.png */; };
+		AA7171751B7B346800B51D25 /* Icon-21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171511B7B346800B51D25 /* Icon-21@2x.png */; };
+		AA7171761B7B346800B51D25 /* Icon-22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171521B7B346800B51D25 /* Icon-22@2x.png */; };
+		AA7171771B7B346800B51D25 /* Icon-23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171531B7B346800B51D25 /* Icon-23@2x.png */; };
+		AA7171781B7B346800B51D25 /* Icon-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171541B7B346800B51D25 /* Icon-24@2x.png */; };
+		AA7171791B7B346800B51D25 /* Icon-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171551B7B346800B51D25 /* Icon-25@2x.png */; };
+		AA71717A1B7B346800B51D25 /* Icon-26@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171561B7B346800B51D25 /* Icon-26@2x.png */; };
+		AA71717B1B7B346800B51D25 /* Icon-27@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171571B7B346800B51D25 /* Icon-27@2x.png */; };
+		AA71717C1B7B346800B51D25 /* Icon-28@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171581B7B346800B51D25 /* Icon-28@2x.png */; };
+		AA71717D1B7B346800B51D25 /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171591B7B346800B51D25 /* Icon-29@2x.png */; };
+		AA71717E1B7B346800B51D25 /* Icon-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71715A1B7B346800B51D25 /* Icon-2@2x.png */; };
+		AA71717F1B7B346800B51D25 /* Icon-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71715B1B7B346800B51D25 /* Icon-30@2x.png */; };
+		AA7171801B7B346800B51D25 /* Icon-31@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71715C1B7B346800B51D25 /* Icon-31@2x.png */; };
+		AA7171811B7B346800B51D25 /* Icon-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71715D1B7B346800B51D25 /* Icon-32@2x.png */; };
+		AA7171821B7B346800B51D25 /* Icon-33@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71715E1B7B346800B51D25 /* Icon-33@2x.png */; };
+		AA7171831B7B346800B51D25 /* Icon-34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA71715F1B7B346800B51D25 /* Icon-34@2x.png */; };
+		AA7171841B7B346800B51D25 /* Icon-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171601B7B346800B51D25 /* Icon-3@2x.png */; };
+		AA7171851B7B346800B51D25 /* Icon-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171611B7B346800B51D25 /* Icon-4@2x.png */; };
+		AA7171861B7B346800B51D25 /* Icon-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171621B7B346800B51D25 /* Icon-5@2x.png */; };
+		AA7171871B7B346800B51D25 /* Icon-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171631B7B346800B51D25 /* Icon-6@2x.png */; };
+		AA7171881B7B346800B51D25 /* Icon-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171641B7B346800B51D25 /* Icon-7@2x.png */; };
+		AA7171891B7B346800B51D25 /* Icon-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171651B7B346800B51D25 /* Icon-8@2x.png */; };
+		AA71718A1B7B346800B51D25 /* Icon-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171661B7B346800B51D25 /* Icon-9@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA71711B1B79CD0E00B51D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA7170FD1B79CD0E00B51D25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA7171041B79CD0E00B51D25;
+			remoteInfo = SwiftSpringboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA7171051B79CD0E00B51D25 /* SwiftSpringboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSpringboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7171091B79CD0E00B51D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA71710A1B79CD0E00B51D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA71710C1B79CD0E00B51D25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA71710F1B79CD0E00B51D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA7171111B79CD0E00B51D25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AA7171141B79CD0E00B51D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AA71711A1B79CD0E00B51D25 /* SwiftSpringboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSpringboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA71711F1B79CD0E00B51D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA7171201B79CD0E00B51D25 /* SwiftSpringboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpringboardTests.swift; sourceTree = "<group>"; };
+		AA7171341B79CE2C00B51D25 /* LMViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMViewControllerView.swift; sourceTree = "<group>"; };
+		AA7171371B79DA9F00B51D25 /* SwiftSpringboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSpringboard-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA7171381B79DAA000B51D25 /* LMApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMApp.m; sourceTree = "<group>"; };
+		AA71713A1B79DB2800B51D25 /* LMApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMApp.h; sourceTree = "<group>"; };
+		AA71713B1B79DB6500B51D25 /* LMAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAppController.m; sourceTree = "<group>"; };
+		AA71713D1B79DB7100B51D25 /* LMAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMAppController.h; sourceTree = "<group>"; };
+		AA71713E1B79DBE700B51D25 /* LMSpringboardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMSpringboardItemView.swift; sourceTree = "<group>"; };
+		AA7171401B79E3E800B51D25 /* LMSpringboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMSpringboardView.swift; sourceTree = "<group>"; };
+		AA7171431B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-0-for-vibrancy@2x.png"; sourceTree = "<group>"; };
+		AA7171441B7B346800B51D25 /* Icon-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-0@2x.png"; sourceTree = "<group>"; };
+		AA7171451B7B346800B51D25 /* Icon-10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-10@2x.png"; sourceTree = "<group>"; };
+		AA7171461B7B346800B51D25 /* Icon-11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-11@2x.png"; sourceTree = "<group>"; };
+		AA7171471B7B346800B51D25 /* Icon-12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-12@2x.png"; sourceTree = "<group>"; };
+		AA7171481B7B346800B51D25 /* Icon-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-13@2x.png"; sourceTree = "<group>"; };
+		AA7171491B7B346800B51D25 /* Icon-14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-14@2x.png"; sourceTree = "<group>"; };
+		AA71714A1B7B346800B51D25 /* Icon-15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-15@2x.png"; sourceTree = "<group>"; };
+		AA71714B1B7B346800B51D25 /* Icon-16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-16@2x.png"; sourceTree = "<group>"; };
+		AA71714C1B7B346800B51D25 /* Icon-17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-17@2x.png"; sourceTree = "<group>"; };
+		AA71714D1B7B346800B51D25 /* Icon-18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-18@2x.png"; sourceTree = "<group>"; };
+		AA71714E1B7B346800B51D25 /* Icon-19@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-19@2x.png"; sourceTree = "<group>"; };
+		AA71714F1B7B346800B51D25 /* Icon-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-1@2x.png"; sourceTree = "<group>"; };
+		AA7171501B7B346800B51D25 /* Icon-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-20@2x.png"; sourceTree = "<group>"; };
+		AA7171511B7B346800B51D25 /* Icon-21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-21@2x.png"; sourceTree = "<group>"; };
+		AA7171521B7B346800B51D25 /* Icon-22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-22@2x.png"; sourceTree = "<group>"; };
+		AA7171531B7B346800B51D25 /* Icon-23@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-23@2x.png"; sourceTree = "<group>"; };
+		AA7171541B7B346800B51D25 /* Icon-24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-24@2x.png"; sourceTree = "<group>"; };
+		AA7171551B7B346800B51D25 /* Icon-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-25@2x.png"; sourceTree = "<group>"; };
+		AA7171561B7B346800B51D25 /* Icon-26@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-26@2x.png"; sourceTree = "<group>"; };
+		AA7171571B7B346800B51D25 /* Icon-27@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-27@2x.png"; sourceTree = "<group>"; };
+		AA7171581B7B346800B51D25 /* Icon-28@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-28@2x.png"; sourceTree = "<group>"; };
+		AA7171591B7B346800B51D25 /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@2x.png"; sourceTree = "<group>"; };
+		AA71715A1B7B346800B51D25 /* Icon-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-2@2x.png"; sourceTree = "<group>"; };
+		AA71715B1B7B346800B51D25 /* Icon-30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-30@2x.png"; sourceTree = "<group>"; };
+		AA71715C1B7B346800B51D25 /* Icon-31@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-31@2x.png"; sourceTree = "<group>"; };
+		AA71715D1B7B346800B51D25 /* Icon-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-32@2x.png"; sourceTree = "<group>"; };
+		AA71715E1B7B346800B51D25 /* Icon-33@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-33@2x.png"; sourceTree = "<group>"; };
+		AA71715F1B7B346800B51D25 /* Icon-34@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-34@2x.png"; sourceTree = "<group>"; };
+		AA7171601B7B346800B51D25 /* Icon-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-3@2x.png"; sourceTree = "<group>"; };
+		AA7171611B7B346800B51D25 /* Icon-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-4@2x.png"; sourceTree = "<group>"; };
+		AA7171621B7B346800B51D25 /* Icon-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-5@2x.png"; sourceTree = "<group>"; };
+		AA7171631B7B346800B51D25 /* Icon-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-6@2x.png"; sourceTree = "<group>"; };
+		AA7171641B7B346800B51D25 /* Icon-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-7@2x.png"; sourceTree = "<group>"; };
+		AA7171651B7B346800B51D25 /* Icon-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-8@2x.png"; sourceTree = "<group>"; };
+		AA7171661B7B346800B51D25 /* Icon-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-9@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA7171021B79CD0E00B51D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7171171B79CD0E00B51D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA7170FC1B79CD0E00B51D25 = {
+			isa = PBXGroup;
+			children = (
+				AA7171071B79CD0E00B51D25 /* SwiftSpringboard */,
+				AA71711D1B79CD0E00B51D25 /* SwiftSpringboardTests */,
+				AA7171061B79CD0E00B51D25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA7171061B79CD0E00B51D25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA7171051B79CD0E00B51D25 /* SwiftSpringboard.app */,
+				AA71711A1B79CD0E00B51D25 /* SwiftSpringboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA7171071B79CD0E00B51D25 /* SwiftSpringboard */ = {
+			isa = PBXGroup;
+			children = (
+				AA7171421B7B346800B51D25 /* Icons */,
+				AA71712A1B79CDAA00B51D25 /* PrivateLaunchServicesApis */,
+				AA71712B1B79CDD400B51D25 /* LMSpringboardView */,
+				AA71710A1B79CD0E00B51D25 /* AppDelegate.swift */,
+				AA71710C1B79CD0E00B51D25 /* ViewController.swift */,
+				AA7171341B79CE2C00B51D25 /* LMViewControllerView.swift */,
+				AA71710E1B79CD0E00B51D25 /* Main.storyboard */,
+				AA7171371B79DA9F00B51D25 /* SwiftSpringboard-Bridging-Header.h */,
+				AA7171111B79CD0E00B51D25 /* Images.xcassets */,
+				AA7171131B79CD0E00B51D25 /* LaunchScreen.xib */,
+				AA7171081B79CD0E00B51D25 /* Supporting Files */,
+			);
+			path = SwiftSpringboard;
+			sourceTree = "<group>";
+		};
+		AA7171081B79CD0E00B51D25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA7171091B79CD0E00B51D25 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA71711D1B79CD0E00B51D25 /* SwiftSpringboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA7171201B79CD0E00B51D25 /* SwiftSpringboardTests.swift */,
+				AA71711E1B79CD0E00B51D25 /* Supporting Files */,
+			);
+			path = SwiftSpringboardTests;
+			sourceTree = "<group>";
+		};
+		AA71711E1B79CD0E00B51D25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA71711F1B79CD0E00B51D25 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA71712A1B79CDAA00B51D25 /* PrivateLaunchServicesApis */ = {
+			isa = PBXGroup;
+			children = (
+				AA71713A1B79DB2800B51D25 /* LMApp.h */,
+				AA7171381B79DAA000B51D25 /* LMApp.m */,
+				AA71713B1B79DB6500B51D25 /* LMAppController.m */,
+				AA71713D1B79DB7100B51D25 /* LMAppController.h */,
+			);
+			name = PrivateLaunchServicesApis;
+			path = LaunchServicesApis;
+			sourceTree = SOURCE_ROOT;
+		};
+		AA71712B1B79CDD400B51D25 /* LMSpringboardView */ = {
+			isa = PBXGroup;
+			children = (
+				AA71713E1B79DBE700B51D25 /* LMSpringboardItemView.swift */,
+				AA7171401B79E3E800B51D25 /* LMSpringboardView.swift */,
+			);
+			path = LMSpringboardView;
+			sourceTree = "<group>";
+		};
+		AA7171421B7B346800B51D25 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				AA7171431B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png */,
+				AA7171441B7B346800B51D25 /* Icon-0@2x.png */,
+				AA7171451B7B346800B51D25 /* Icon-10@2x.png */,
+				AA7171461B7B346800B51D25 /* Icon-11@2x.png */,
+				AA7171471B7B346800B51D25 /* Icon-12@2x.png */,
+				AA7171481B7B346800B51D25 /* Icon-13@2x.png */,
+				AA7171491B7B346800B51D25 /* Icon-14@2x.png */,
+				AA71714A1B7B346800B51D25 /* Icon-15@2x.png */,
+				AA71714B1B7B346800B51D25 /* Icon-16@2x.png */,
+				AA71714C1B7B346800B51D25 /* Icon-17@2x.png */,
+				AA71714D1B7B346800B51D25 /* Icon-18@2x.png */,
+				AA71714E1B7B346800B51D25 /* Icon-19@2x.png */,
+				AA71714F1B7B346800B51D25 /* Icon-1@2x.png */,
+				AA7171501B7B346800B51D25 /* Icon-20@2x.png */,
+				AA7171511B7B346800B51D25 /* Icon-21@2x.png */,
+				AA7171521B7B346800B51D25 /* Icon-22@2x.png */,
+				AA7171531B7B346800B51D25 /* Icon-23@2x.png */,
+				AA7171541B7B346800B51D25 /* Icon-24@2x.png */,
+				AA7171551B7B346800B51D25 /* Icon-25@2x.png */,
+				AA7171561B7B346800B51D25 /* Icon-26@2x.png */,
+				AA7171571B7B346800B51D25 /* Icon-27@2x.png */,
+				AA7171581B7B346800B51D25 /* Icon-28@2x.png */,
+				AA7171591B7B346800B51D25 /* Icon-29@2x.png */,
+				AA71715A1B7B346800B51D25 /* Icon-2@2x.png */,
+				AA71715B1B7B346800B51D25 /* Icon-30@2x.png */,
+				AA71715C1B7B346800B51D25 /* Icon-31@2x.png */,
+				AA71715D1B7B346800B51D25 /* Icon-32@2x.png */,
+				AA71715E1B7B346800B51D25 /* Icon-33@2x.png */,
+				AA71715F1B7B346800B51D25 /* Icon-34@2x.png */,
+				AA7171601B7B346800B51D25 /* Icon-3@2x.png */,
+				AA7171611B7B346800B51D25 /* Icon-4@2x.png */,
+				AA7171621B7B346800B51D25 /* Icon-5@2x.png */,
+				AA7171631B7B346800B51D25 /* Icon-6@2x.png */,
+				AA7171641B7B346800B51D25 /* Icon-7@2x.png */,
+				AA7171651B7B346800B51D25 /* Icon-8@2x.png */,
+				AA7171661B7B346800B51D25 /* Icon-9@2x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA7171041B79CD0E00B51D25 /* SwiftSpringboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA7171241B79CD0E00B51D25 /* Build configuration list for PBXNativeTarget "SwiftSpringboard" */;
+			buildPhases = (
+				AA7171011B79CD0E00B51D25 /* Sources */,
+				AA7171021B79CD0E00B51D25 /* Frameworks */,
+				AA7171031B79CD0E00B51D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSpringboard;
+			productName = SwiftSpringboard;
+			productReference = AA7171051B79CD0E00B51D25 /* SwiftSpringboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA7171191B79CD0E00B51D25 /* SwiftSpringboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA7171271B79CD0E00B51D25 /* Build configuration list for PBXNativeTarget "SwiftSpringboardTests" */;
+			buildPhases = (
+				AA7171161B79CD0E00B51D25 /* Sources */,
+				AA7171171B79CD0E00B51D25 /* Frameworks */,
+				AA7171181B79CD0E00B51D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA71711C1B79CD0E00B51D25 /* PBXTargetDependency */,
+			);
+			name = SwiftSpringboardTests;
+			productName = SwiftSpringboardTests;
+			productReference = AA71711A1B79CD0E00B51D25 /* SwiftSpringboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA7170FD1B79CD0E00B51D25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Joachim Boggild";
+				TargetAttributes = {
+					AA7171041B79CD0E00B51D25 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AA7171191B79CD0E00B51D25 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AA7171041B79CD0E00B51D25;
+					};
+				};
+			};
+			buildConfigurationList = AA7171001B79CD0E00B51D25 /* Build configuration list for PBXProject "SwiftSpringboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA7170FC1B79CD0E00B51D25;
+			productRefGroup = AA7171061B79CD0E00B51D25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA7171041B79CD0E00B51D25 /* SwiftSpringboard */,
+				AA7171191B79CD0E00B51D25 /* SwiftSpringboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA7171031B79CD0E00B51D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7171891B7B346800B51D25 /* Icon-8@2x.png in Resources */,
+				AA71717F1B7B346800B51D25 /* Icon-30@2x.png in Resources */,
+				AA7171761B7B346800B51D25 /* Icon-22@2x.png in Resources */,
+				AA7171871B7B346800B51D25 /* Icon-6@2x.png in Resources */,
+				AA7171681B7B346800B51D25 /* Icon-0@2x.png in Resources */,
+				AA7171861B7B346800B51D25 /* Icon-5@2x.png in Resources */,
+				AA7171731B7B346800B51D25 /* Icon-1@2x.png in Resources */,
+				AA71718A1B7B346800B51D25 /* Icon-9@2x.png in Resources */,
+				AA7171801B7B346800B51D25 /* Icon-31@2x.png in Resources */,
+				AA7171671B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png in Resources */,
+				AA7171711B7B346800B51D25 /* Icon-18@2x.png in Resources */,
+				AA71716A1B7B346800B51D25 /* Icon-11@2x.png in Resources */,
+				AA7171851B7B346800B51D25 /* Icon-4@2x.png in Resources */,
+				AA7171881B7B346800B51D25 /* Icon-7@2x.png in Resources */,
+				AA7171831B7B346800B51D25 /* Icon-34@2x.png in Resources */,
+				AA7171791B7B346800B51D25 /* Icon-25@2x.png in Resources */,
+				AA7171841B7B346800B51D25 /* Icon-3@2x.png in Resources */,
+				AA7171721B7B346800B51D25 /* Icon-19@2x.png in Resources */,
+				AA7171101B79CD0E00B51D25 /* Main.storyboard in Resources */,
+				AA71716F1B7B346800B51D25 /* Icon-16@2x.png in Resources */,
+				AA7171781B7B346800B51D25 /* Icon-24@2x.png in Resources */,
+				AA7171741B7B346800B51D25 /* Icon-20@2x.png in Resources */,
+				AA71717D1B7B346800B51D25 /* Icon-29@2x.png in Resources */,
+				AA71716D1B7B346800B51D25 /* Icon-14@2x.png in Resources */,
+				AA71716B1B7B346800B51D25 /* Icon-12@2x.png in Resources */,
+				AA71717C1B7B346800B51D25 /* Icon-28@2x.png in Resources */,
+				AA7171151B79CD0E00B51D25 /* LaunchScreen.xib in Resources */,
+				AA7171751B7B346800B51D25 /* Icon-21@2x.png in Resources */,
+				AA7171771B7B346800B51D25 /* Icon-23@2x.png in Resources */,
+				AA7171691B7B346800B51D25 /* Icon-10@2x.png in Resources */,
+				AA7171821B7B346800B51D25 /* Icon-33@2x.png in Resources */,
+				AA71717B1B7B346800B51D25 /* Icon-27@2x.png in Resources */,
+				AA71717A1B7B346800B51D25 /* Icon-26@2x.png in Resources */,
+				AA71716C1B7B346800B51D25 /* Icon-13@2x.png in Resources */,
+				AA71716E1B7B346800B51D25 /* Icon-15@2x.png in Resources */,
+				AA7171121B79CD0E00B51D25 /* Images.xcassets in Resources */,
+				AA71717E1B7B346800B51D25 /* Icon-2@2x.png in Resources */,
+				AA7171811B7B346800B51D25 /* Icon-32@2x.png in Resources */,
+				AA7171701B7B346800B51D25 /* Icon-17@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7171181B79CD0E00B51D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA7171011B79CD0E00B51D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7171391B79DAA000B51D25 /* LMApp.m in Sources */,
+				AA7171411B79E3E800B51D25 /* LMSpringboardView.swift in Sources */,
+				AA7171351B79CE2C00B51D25 /* LMViewControllerView.swift in Sources */,
+				AA71710D1B79CD0E00B51D25 /* ViewController.swift in Sources */,
+				AA71713F1B79DBE700B51D25 /* LMSpringboardItemView.swift in Sources */,
+				AA71713C1B79DB6500B51D25 /* LMAppController.m in Sources */,
+				AA71710B1B79CD0E00B51D25 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7171161B79CD0E00B51D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7171211B79CD0E00B51D25 /* SwiftSpringboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA71711C1B79CD0E00B51D25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA7171041B79CD0E00B51D25 /* SwiftSpringboard */;
+			targetProxy = AA71711B1B79CD0E00B51D25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA71710E1B79CD0E00B51D25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA71710F1B79CD0E00B51D25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA7171131B79CD0E00B51D25 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA7171141B79CD0E00B51D25 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA7171221B79CD0E00B51D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA7171231B79CD0E00B51D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA7171251B79CD0E00B51D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SwiftSpringboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSpringboard/SwiftSpringboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA7171261B79CD0E00B51D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SwiftSpringboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSpringboard/SwiftSpringboard-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		AA7171281B79CD0E00B51D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftSpringboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSpringboard.app/SwiftSpringboard";
+			};
+			name = Debug;
+		};
+		AA7171291B79CD0E00B51D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftSpringboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSpringboard.app/SwiftSpringboard";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA7171001B79CD0E00B51D25 /* Build configuration list for PBXProject "SwiftSpringboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA7171221B79CD0E00B51D25 /* Debug */,
+				AA7171231B79CD0E00B51D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA7171241B79CD0E00B51D25 /* Build configuration list for PBXNativeTarget "SwiftSpringboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA7171251B79CD0E00B51D25 /* Debug */,
+				AA7171261B79CD0E00B51D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA7171271B79CD0E00B51D25 /* Build configuration list for PBXNativeTarget "SwiftSpringboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA7171281B79CD0E00B51D25 /* Debug */,
+				AA7171291B79CD0E00B51D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA7170FD1B79CD0E00B51D25 /* Project object */;
+}
