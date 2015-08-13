@@ -9,15 +9,17 @@
 import Foundation
 import UIKit
 
-public class LMViewControllerView : UIView
+public class SpringboardViewControllerView : UIView
 {
-	public var springboard: LMSpringboardView!
+	public var springboard: SpringboardView!
 	public var appView: UIView!
 	public var respringButton: UIButton!
 	public var isAppLaunched: Bool = false
 	
+	public var delegate: SpringboardDelegate?
+	
 	private var _appLaunchMaskView: UIImageView!
-	private var _lastLaunchedItem: LMSpringboardItemView?
+	private var _lastLaunchedItem: SpringboardItemView?
 	
 	private let _ITEM_HEIGHT: CGFloat = 120;
 	private let _ITEM_WIDTH: CGFloat = 120;
@@ -28,50 +30,19 @@ public class LMViewControllerView : UIView
 	
 	public func setup() {
 		let fullFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-		let mask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth;
-		
-		var bg = UIImageView(frame: fullFrame);
-		bg.image = UIImage(named: "Wallpaper.png")
-		bg.contentMode = UIViewContentMode.ScaleAspectFill;
-		bg.autoresizingMask = mask;
-		addSubview(bg);
-		
-		springboard = LMSpringboardView(frame: fullFrame);
-		springboard.autoresizingMask = mask;
+		let resizingOptions = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth;
 
-		var itemViews = [LMSpringboardItemView]();
+		setBackgroundWithFrame(fullFrame, withAutoresizingMask: resizingOptions);
 		
-		let apps = LMAppController.sharedInstance().installedApplications as! [LMApp];
+		springboard = SpringboardView(frame: fullFrame);
+		springboard.autoresizingMask = resizingOptions;
+
+		let items = delegate?.springboardGetItems?();
 		
-		// pre-render the known icons
-		var images = [UIImage]();
-		
-		let clipPath = UIBezierPath(ovalInRect: CGRectInset(CGRectMake(0, 0, _ITEM_WIDTH, _ITEM_HEIGHT), 0.5, 0.5));
-		
-		for app in apps {
-			let image = app.icon;
-			
-			UIGraphicsBeginImageContextWithOptions(CGSizeMake(_ITEM_WIDTH, _ITEM_HEIGHT), false, UIScreen.mainScreen().scale);
-			clipPath.addClip();
-			image.drawInRect(CGRectMake(0, 0, _ITEM_WIDTH, _ITEM_HEIGHT));
-			let renderedImage = UIGraphicsGetImageFromCurrentImageContext();
-			UIGraphicsEndImageContext();
-			
-			images.append(renderedImage);
+		if items != nil {
+			let views = makeItemViewsFromItems(items!);
+			springboard.itemViews = views;
 		}
-
-		// build out item set
-		var index = 0;
-
-		for app in apps {
-			var item = LMSpringboardItemView();
-			item.bundleIdentifier = app.bundleIdentifier;
-			item.setTitle(app.name);
-			item.icon.image = images[index++];
-			itemViews.append(item);
-		}
-		
-		springboard.itemViews = itemViews;
 		
 		addSubview(springboard);
 		
@@ -86,6 +57,30 @@ public class LMViewControllerView : UIView
 		respringButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton;
 
 		addSubview(respringButton);
+	}
+	
+	private func makeItemViewsFromItems(items: [PSpringboardItem]) -> [SpringboardItemView] {
+		var views = [SpringboardItemView]();
+		for item in items {
+			var view = SpringboardItemView();
+			view.item = item;
+			view.icon.image = item.image;
+			views.append(view);
+		}
+		
+		return views;
+	}
+	
+	public func setContent(content: [SpringboardItemView]) {
+		springboard.itemViews = content;
+	}
+	
+	private func setBackgroundWithFrame(frame: CGRect, withAutoresizingMask autoresizingMask: UIViewAutoresizing) {
+		var bg = UIImageView(frame: frame);
+		bg.image = UIImage(named: "Wallpaper.png")
+		bg.contentMode = UIViewContentMode.ScaleAspectFill;
+		bg.autoresizingMask = autoresizingMask;
+		addSubview(bg);
 	}
 	
 	public override func layoutSubviews() {
@@ -114,7 +109,7 @@ public class LMViewControllerView : UIView
 		respringButton.center = CGPointMake(size.width*0.5, size.height-60*0.5);
 	}
 
-	public func launchAppItem(item: LMSpringboardItemView) {
+	public func launchAppItem(item: SpringboardItemView) {
 		if !isAppLaunched {
 			isAppLaunched = true;
 			_lastLaunchedItem = item;
@@ -158,8 +153,7 @@ public class LMViewControllerView : UIView
 				let index = self.springboard.indexOfItemClosestToPoint(self.springboard.convertPoint(pointInSelf, fromView:self));
 				self.springboard.centerOnIndex(index, zoomScale:self.springboard.zoomScale, animated:false);
 				
-				
-				LMAppController.sharedInstance().openAppWithBundleIdentifier(item.bundleIdentifier);
+				self.delegate?.springboard?(self, itemWasTapped: item.item!);
 			}
 		);
 	}
@@ -171,7 +165,7 @@ public class LMViewControllerView : UIView
 			let dx = pointInSelf.x - appView.center.x;
 			let dy = pointInSelf.y - appView.center.y;
 			
-			let appScale = 60*_lastLaunchedItem!.scale/min(appView.bounds.size.width, appView.bounds.size.height);
+			let appScale = _ITEM_HEIGHT*_lastLaunchedItem!.scale/min(appView.bounds.size.width, appView.bounds.size.height);
 			
 			let appTransform = CGAffineTransformScale(CGAffineTransformMakeTranslation(dx, dy), appScale, appScale);
 			appView.maskView = _appLaunchMaskView;

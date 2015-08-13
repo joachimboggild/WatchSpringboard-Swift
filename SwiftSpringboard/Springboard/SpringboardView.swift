@@ -1,5 +1,5 @@
 //
-//  LMSpringboardView.swift
+//  SpringboardView.swift
 //  SwiftSpringboard
 //
 //  Created by Joachim Boggild on 11/08/15.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
+public class SpringboardView: UIScrollView, UIScrollViewDelegate
 {
 	public var minimumZoomLevelToLaunchApp: CGFloat = 0.0
 	public var doubleTapGesture: UITapGestureRecognizer!
@@ -140,7 +140,7 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
 	
 	// -----------------------------------------------------------------------------------------------
 	// MARK:
-	// MARK: LMSpringboardView
+	// MARK: SpringboardView
 	
 
 	private func showAllContentAnimated(animated: Bool) {
@@ -310,7 +310,7 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
 		return CGRectMake(center.x-size.width*0.5, center.y-size.height*0.5, size.width, size.height);
 	}
 	
-	private func LM_transformView(view: LMSpringboardItemView) {
+	private func LM_transformView(view: SpringboardItemView) {
 		// TODO: refactor to make functions use converter and helper functions
 		let size = bounds.size;
 		let zoomScale = _zoomScaleCache;
@@ -689,7 +689,7 @@ public class LMSpringboardView: UIScrollView, UIScrollViewDelegate
   
 		let scale: CGFloat = min(_minimumItemScaling*_transformFactor+(1-_transformFactor), 1);
 		_minTransform = CGAffineTransformMakeScale(scale, scale);
-		for view in itemViews as! [LMSpringboardItemView] {
+		for view in itemViews as! [SpringboardItemView] {
 			LM_transformView(view);
 		}
 	}

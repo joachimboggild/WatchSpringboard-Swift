@@ -8,17 +8,17 @@
 
 import UIKit
 
-public class ViewController: UIViewController, UIGestureRecognizerDelegate
+public class ViewController: UIViewController, UIGestureRecognizerDelegate, SpringboardDelegate
 {
 	// -----------------------------------------------------------------------------------------------
 	// MARK:
 	// MARK: PRIVATES
 	
-	private var customView: LMViewControllerView {
-			return view as! LMViewControllerView;
+	private var customView: SpringboardViewControllerView {
+			return view as! SpringboardViewControllerView;
 	}
 
-	private var springboard: LMSpringboardView {
+	private var springboard: SpringboardView {
 		return customView.springboard;
 	}
 	
@@ -82,15 +82,81 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 
 	func LM_iconTapped(sender: UITapGestureRecognizer) {
 		var item = sender.view
-		while item != nil && !(item is LMSpringboardItemView) {
+		while item != nil && !(item is SpringboardItemView) {
 			item = item?.superview;
 		}
 		
-		customView.launchAppItem(item as! LMSpringboardItemView);
+		customView.launchAppItem(item as! SpringboardItemView);
 		
 		UIView.animateWithDuration(0.5) {
 			self.setNeedsStatusBarAppearanceUpdate();
 		};
+	}
+	
+	
+	
+	
+	// -----------------------------------------------------------------------------------------------
+	// MARK:
+	// MARK: SpringboardDelegate
+
+	public func springboardGetItems() -> [PSpringboardItem] {
+		let apps = LMAppController.sharedInstance().installedApplications as! [LMApp];
+		var items = [PSpringboardItem]();
+		
+		for app in apps {
+			var swapp = SwiftApp(bundleIdentifier: app.bundleIdentifier);
+			items.append(swapp);
+		}
+		
+		return items;
+	}
+
+	public func springboard(springboard: SpringboardViewControllerView, itemWasTapped item: PSpringboardItem) {
+		LMAppController.sharedInstance().openAppWithBundleIdentifier(item.identifier);
+	}
+	
+//	public func makeItemList() -> [SpringboardItemView] {
+//		var itemViews = [SpringboardItemView]();
+//		
+//		let apps = LMAppController.sharedInstance().installedApplications as! [LMApp];
+//		
+//		// pre-render the known icons
+//		var images = [UIImage]();
+//		
+//		for app in apps {
+//			images.append(makeImageFromApp(app));
+//		}
+//		
+//		// build out item set
+//		var index = 0;
+//		
+//		for app in apps {
+//			var item = SpringboardItemView();
+//			item.bundleIdentifier = app.bundleIdentifier;
+//			item.setTitle(app.name);
+//			item.icon.image = images[index++];
+//			itemViews.append(item);
+//		}
+//		
+//		return itemViews;
+//	}
+	
+	public func makeImageFromApp(app: LMApp) -> UIImage {
+		let itemWidth: CGFloat = 120;
+		let itemHeight: CGFloat = 120;
+		
+		let image = app.icon
+
+		let clipPath = UIBezierPath(ovalInRect: CGRectInset(CGRectMake(0, 0, itemWidth, itemHeight), 0.5, 0.5));
+		
+		UIGraphicsBeginImageContextWithOptions(CGSizeMake(itemWidth, itemHeight), false, UIScreen.mainScreen().scale);
+		clipPath.addClip();
+		image.drawInRect(CGRectMake(0, 0, itemWidth, itemHeight));
+		let renderedImage = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		
+		return renderedImage;
 	}
 
 	
@@ -116,11 +182,12 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate
 
 	public override func viewDidLoad() {
 		super.viewDidLoad()
+		customView.delegate = self;
 		customView.setup();
 		customView.respringButton.addTarget(self, action: "LM_respringTapped:", forControlEvents: UIControlEvents.TouchUpInside);
 		springboard.alpha = 0;
 		
-		for item in springboard.itemViews as! [LMSpringboardItemView] {
+		for item in springboard.itemViews as! [SpringboardItemView] {
 			let tap = UITapGestureRecognizer(target: self, action: "LM_iconTapped:");
 			tap.numberOfTapsRequired = 1;
 			tap.delegate = self;

@@ -1,5 +1,5 @@
 //
-//  LMSpringboardItemView.swift
+//  SpringboardItemView.swift
 //  SwiftSpringboard
 //
 //  Created by Joachim Boggild on 11/08/15.
@@ -9,13 +9,12 @@
 import Foundation
 import UIKit
 
-public class LMSpringboardItemView: UIView
+public class SpringboardItemView: UIView
 {
 	var icon: UIImageView!
 	var label: UILabel!
-	var isFolderLike: Bool?
-	var bundleIdentifier: String = "";
-
+	var identifier: String = "";
+	
 	private var _visualEffectView: UIView?
 	private var _visualEffectMaskView: UIImageView?
 	
@@ -32,7 +31,19 @@ public class LMSpringboardItemView: UIView
 			setScale(scale, animated: false);
 		}
 	}
-	
+
+	private var _item: PSpringboardItem?
+	var item: PSpringboardItem? {
+		get {
+			return _item;
+		}
+		
+		set {
+			_item = newValue;
+			setTitle(_item?.label);
+		}
+	}
+
 	init() {
 		_scale = 1;
 		super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -88,8 +99,8 @@ public class LMSpringboardItemView: UIView
 		}
 	}
 	
-	func setTitle(title: String) {
-		label.text = title;
+	private func setTitle(title: String?) {
+		label.text = title ?? "";
 	}
 	
 	public override func layoutSubviews() {

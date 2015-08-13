@@ -13,11 +13,11 @@
 		AA7171121B79CD0E00B51D25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA7171111B79CD0E00B51D25 /* Images.xcassets */; };
 		AA7171151B79CD0E00B51D25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7171131B79CD0E00B51D25 /* LaunchScreen.xib */; };
 		AA7171211B79CD0E00B51D25 /* SwiftSpringboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171201B79CD0E00B51D25 /* SwiftSpringboardTests.swift */; };
-		AA7171351B79CE2C00B51D25 /* LMViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171341B79CE2C00B51D25 /* LMViewControllerView.swift */; };
+		AA7171351B79CE2C00B51D25 /* SpringboardViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171341B79CE2C00B51D25 /* SpringboardViewControllerView.swift */; };
 		AA7171391B79DAA000B51D25 /* LMApp.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7171381B79DAA000B51D25 /* LMApp.m */; };
 		AA71713C1B79DB6500B51D25 /* LMAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA71713B1B79DB6500B51D25 /* LMAppController.m */; };
-		AA71713F1B79DBE700B51D25 /* LMSpringboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71713E1B79DBE700B51D25 /* LMSpringboardItemView.swift */; };
-		AA7171411B79E3E800B51D25 /* LMSpringboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171401B79E3E800B51D25 /* LMSpringboardView.swift */; };
+		AA71713F1B79DBE700B51D25 /* SpringboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71713E1B79DBE700B51D25 /* SpringboardItemView.swift */; };
+		AA7171411B79E3E800B51D25 /* SpringboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7171401B79E3E800B51D25 /* SpringboardView.swift */; };
 		AA7171671B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171431B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png */; };
 		AA7171681B7B346800B51D25 /* Icon-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171441B7B346800B51D25 /* Icon-0@2x.png */; };
 		AA7171691B7B346800B51D25 /* Icon-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171451B7B346800B51D25 /* Icon-10@2x.png */; };
@@ -54,6 +54,9 @@
 		AA7171881B7B346800B51D25 /* Icon-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171641B7B346800B51D25 /* Icon-7@2x.png */; };
 		AA7171891B7B346800B51D25 /* Icon-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171651B7B346800B51D25 /* Icon-8@2x.png */; };
 		AA71718A1B7B346800B51D25 /* Icon-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7171661B7B346800B51D25 /* Icon-9@2x.png */; };
+		AAEAF39D1B7C9A7F00CA5377 /* SpringboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEAF39C1B7C9A7F00CA5377 /* SpringboardDelegate.swift */; };
+		AAEAF39F1B7C9AE300CA5377 /* PSpringboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEAF39E1B7C9AE300CA5377 /* PSpringboardItem.swift */; };
+		AAEAF3A11B7CA58D00CA5377 /* SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEAF3A01B7CA58D00CA5377 /* SwiftApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,14 +80,14 @@
 		AA71711A1B79CD0E00B51D25 /* SwiftSpringboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSpringboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA71711F1B79CD0E00B51D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA7171201B79CD0E00B51D25 /* SwiftSpringboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpringboardTests.swift; sourceTree = "<group>"; };
-		AA7171341B79CE2C00B51D25 /* LMViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMViewControllerView.swift; sourceTree = "<group>"; };
+		AA7171341B79CE2C00B51D25 /* SpringboardViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringboardViewControllerView.swift; sourceTree = "<group>"; };
 		AA7171371B79DA9F00B51D25 /* SwiftSpringboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSpringboard-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA7171381B79DAA000B51D25 /* LMApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMApp.m; sourceTree = "<group>"; };
 		AA71713A1B79DB2800B51D25 /* LMApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMApp.h; sourceTree = "<group>"; };
 		AA71713B1B79DB6500B51D25 /* LMAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAppController.m; sourceTree = "<group>"; };
 		AA71713D1B79DB7100B51D25 /* LMAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMAppController.h; sourceTree = "<group>"; };
-		AA71713E1B79DBE700B51D25 /* LMSpringboardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMSpringboardItemView.swift; sourceTree = "<group>"; };
-		AA7171401B79E3E800B51D25 /* LMSpringboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMSpringboardView.swift; sourceTree = "<group>"; };
+		AA71713E1B79DBE700B51D25 /* SpringboardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringboardItemView.swift; sourceTree = "<group>"; };
+		AA7171401B79E3E800B51D25 /* SpringboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringboardView.swift; sourceTree = "<group>"; };
 		AA7171431B7B346800B51D25 /* Icon-0-for-vibrancy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-0-for-vibrancy@2x.png"; sourceTree = "<group>"; };
 		AA7171441B7B346800B51D25 /* Icon-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-0@2x.png"; sourceTree = "<group>"; };
 		AA7171451B7B346800B51D25 /* Icon-10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-10@2x.png"; sourceTree = "<group>"; };
@@ -121,6 +124,9 @@
 		AA7171641B7B346800B51D25 /* Icon-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-7@2x.png"; sourceTree = "<group>"; };
 		AA7171651B7B346800B51D25 /* Icon-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-8@2x.png"; sourceTree = "<group>"; };
 		AA7171661B7B346800B51D25 /* Icon-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-9@2x.png"; sourceTree = "<group>"; };
+		AAEAF39C1B7C9A7F00CA5377 /* SpringboardDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringboardDelegate.swift; sourceTree = "<group>"; };
+		AAEAF39E1B7C9AE300CA5377 /* PSpringboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSpringboardItem.swift; sourceTree = "<group>"; };
+		AAEAF3A01B7CA58D00CA5377 /* SwiftApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +170,10 @@
 			children = (
 				AA7171421B7B346800B51D25 /* Icons */,
 				AA71712A1B79CDAA00B51D25 /* PrivateLaunchServicesApis */,
-				AA71712B1B79CDD400B51D25 /* LMSpringboardView */,
+				AA71712B1B79CDD400B51D25 /* Springboard */,
+				AAEAF3A01B7CA58D00CA5377 /* SwiftApp.swift */,
 				AA71710A1B79CD0E00B51D25 /* AppDelegate.swift */,
 				AA71710C1B79CD0E00B51D25 /* ViewController.swift */,
-				AA7171341B79CE2C00B51D25 /* LMViewControllerView.swift */,
 				AA71710E1B79CD0E00B51D25 /* Main.storyboard */,
 				AA7171371B79DA9F00B51D25 /* SwiftSpringboard-Bridging-Header.h */,
 				AA7171111B79CD0E00B51D25 /* Images.xcassets */,
@@ -214,13 +220,16 @@
 			path = LaunchServicesApis;
 			sourceTree = SOURCE_ROOT;
 		};
-		AA71712B1B79CDD400B51D25 /* LMSpringboardView */ = {
+		AA71712B1B79CDD400B51D25 /* Springboard */ = {
 			isa = PBXGroup;
 			children = (
-				AA71713E1B79DBE700B51D25 /* LMSpringboardItemView.swift */,
-				AA7171401B79E3E800B51D25 /* LMSpringboardView.swift */,
+				AA7171341B79CE2C00B51D25 /* SpringboardViewControllerView.swift */,
+				AA71713E1B79DBE700B51D25 /* SpringboardItemView.swift */,
+				AA7171401B79E3E800B51D25 /* SpringboardView.swift */,
+				AAEAF39C1B7C9A7F00CA5377 /* SpringboardDelegate.swift */,
+				AAEAF39E1B7C9AE300CA5377 /* PSpringboardItem.swift */,
 			);
-			path = LMSpringboardView;
+			path = Springboard;
 			sourceTree = "<group>";
 		};
 		AA7171421B7B346800B51D25 /* Icons */ = {
@@ -402,11 +411,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEAF39F1B7C9AE300CA5377 /* PSpringboardItem.swift in Sources */,
+				AAEAF3A11B7CA58D00CA5377 /* SwiftApp.swift in Sources */,
 				AA7171391B79DAA000B51D25 /* LMApp.m in Sources */,
-				AA7171411B79E3E800B51D25 /* LMSpringboardView.swift in Sources */,
-				AA7171351B79CE2C00B51D25 /* LMViewControllerView.swift in Sources */,
+				AA7171411B79E3E800B51D25 /* SpringboardView.swift in Sources */,
+				AAEAF39D1B7C9A7F00CA5377 /* SpringboardDelegate.swift in Sources */,
+				AA7171351B79CE2C00B51D25 /* SpringboardViewControllerView.swift in Sources */,
 				AA71710D1B79CD0E00B51D25 /* ViewController.swift in Sources */,
-				AA71713F1B79DBE700B51D25 /* LMSpringboardItemView.swift in Sources */,
+				AA71713F1B79DBE700B51D25 /* SpringboardItemView.swift in Sources */,
 				AA71713C1B79DB6500B51D25 /* LMAppController.m in Sources */,
 				AA71710B1B79CD0E00B51D25 /* AppDelegate.swift in Sources */,
 			);
