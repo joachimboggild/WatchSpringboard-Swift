@@ -116,32 +116,6 @@ public class ViewController: UIViewController, UIGestureRecognizerDelegate, Spri
 		LMAppController.sharedInstance().openAppWithBundleIdentifier(item.identifier);
 	}
 	
-//	public func makeItemList() -> [SpringboardItemView] {
-//		var itemViews = [SpringboardItemView]();
-//		
-//		let apps = LMAppController.sharedInstance().installedApplications as! [LMApp];
-//		
-//		// pre-render the known icons
-//		var images = [UIImage]();
-//		
-//		for app in apps {
-//			images.append(makeImageFromApp(app));
-//		}
-//		
-//		// build out item set
-//		var index = 0;
-//		
-//		for app in apps {
-//			var item = SpringboardItemView();
-//			item.bundleIdentifier = app.bundleIdentifier;
-//			item.setTitle(app.name);
-//			item.icon.image = images[index++];
-//			itemViews.append(item);
-//		}
-//		
-//		return itemViews;
-//	}
-	
 	public func makeImageFromApp(app: LMApp) -> UIImage {
 		let itemWidth: CGFloat = 120;
 		let itemHeight: CGFloat = 120;
